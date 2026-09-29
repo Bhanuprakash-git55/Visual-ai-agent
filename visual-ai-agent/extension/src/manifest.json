@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Visual AI Agent - Extension",
+  "version": "0.1.0",
+  "description": "Extension that captures user activity for Visual AI Agent (scaffold).",
+  "action": {
+    "default_popup": "src/ui/popup.html"
+  },
+  "options_ui": {
+    "page": "src/ui/options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "scripting",
+    "alarms"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

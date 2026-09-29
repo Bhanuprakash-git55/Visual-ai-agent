@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visual AI Agent</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 12px; width: 300px; }
+    h1 { font-size: 18px; margin: 0 0 8px 0; }
+    #controls { margin-top: 10px; display:flex; gap:8px; }
+    button { padding: 8px 10px; cursor: pointer; }
+    #status { margin-top: 8px; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>Visual AI Agent</h1>
+  <div id="status">Status: <span id="status-label">Stopped</span></div>
+  <div id="stats" style="margin-top:8px;color:#333;">
+    <div>Activities: <span id="activities-count">0</span></div>
+    <div>Screenshots: <span id="screenshots-count">0</span></div>
+  </div>
+  <div id="controls">
+    <button id="btn-start">Start Monitoring</button>
+    <button id="btn-stop">Stop Monitoring</button>
+  </div>
+  <script src="src/ui/popup.js"></script>
+</body>
+</html>

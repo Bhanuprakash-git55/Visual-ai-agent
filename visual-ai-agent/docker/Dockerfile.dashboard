@@ -1,0 +1,11 @@
+# Dashboard Dockerfile (placeholder)
+# TODO: Use multi-stage build to produce a small static asset image for production
+FROM node:18-alpine
+WORKDIR /app
+
+COPY dashboard/package.json /app/package.json
+RUN npm ci --silent
+
+COPY dashboard /app
+
+CMD ["npm", "run", "dev"]

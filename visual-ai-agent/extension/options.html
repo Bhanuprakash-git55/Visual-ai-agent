@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visual AI Agent - Options</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 12px; width: 420px; }
+    label { display:block; margin:8px 0; }
+    input[type="number"] { width:80px; }
+    .row { display:flex; align-items:center; gap:8px; }
+    button { margin-top: 12px; padding:8px 10px; }
+  </style>
+</head>
+<body>
+  <h1>Options</h1>
+  <label class="row">Auto Capture Interval (seconds): <input id="interval" type="number" min="5" step="1" /></label>
+  <label class="row">Enable Monitoring: <input id="enable-monitoring" type="checkbox" /></label>
+  <button id="btn-save">Save Settings</button>
+  <div id="message" aria-live="polite" style="margin-top:8px;color:green"></div>
+
+  <script src="src/ui/options.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Extension build placeholder
+# Typically the extension is built with a bundler (esbuild/webpack) and artifacts are produced for Chrome store.
+# TODO: Add a build stage that outputs a zip/crx for distribution.
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY extension /app/extension
+# TODO: Run extension bundling here
+
+FROM scratch AS release
+# Intentionally empty — extension artifacts are produced at build time outside a runtime container
